@@ -18,7 +18,8 @@ function Orchid ( {orchid} ) {
             )
         }    
 
-        <Card.Img variant = "top" style = {{ width: '200px', height: '200px', borderRadius: '0px', objectFit: 'cover', margin: 'auto' }} src = {image} />
+        <Card.Img variant = "top" style = {{ width: '200px', height: '200px', borderRadius: '0px', 
+                                             objectFit: 'cover', margin: 'auto' }} src = {image} />
         <Card.Body>
             <Card.Title className = "text-center">{name}</Card.Title>
             <Card.Text>Category: {category}</Card.Text>
@@ -30,7 +31,9 @@ function Orchid ( {orchid} ) {
             title = {`ID: ${id} - ${name}`}
             body = {
                 <div>
-                    <img style = {{ width: '200px', height: '200px', marginLeft: 'auto', marginRight: 'auto', marginBottom: '20px', borderRadius: '0px', display: 'block', objectFit: 'cover' }} src = {image} />
+                    <img style = {{ width: '200px', height: '200px', marginLeft: 'auto', 
+                                    marginRight: 'auto', marginBottom: '20px', borderRadius: '0px', 
+                                    display: 'block', objectFit: 'cover' }} src = {image} />
                     <h4 className = "text-center">{name}</h4>
                     <p>Description: {description}</p>
                 </div>
