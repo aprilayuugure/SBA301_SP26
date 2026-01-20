@@ -1,7 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { useState, useMemo } from "react";
-import Orchid from "../components/Orchid"; 
-import FilterSort from "../components/FilterSort"; 
+import Orchid from "../features/Orchid"; 
+import FilterSort from "../features/FilterSort"; 
 
 function ListOfOrchids( { orchids, searchText } ) {
     const [filterCategory, setFilterCategory] = useState('');

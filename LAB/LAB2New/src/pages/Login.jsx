@@ -1,31 +1,15 @@
 import { Container, Card, Form, Row, Col, Button, Alert } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import validateLogin from '../features/auth/LoginValidation';
+import { useAuth } from '../hooks/useAuth';
 
 function Login({ state, dispatch, accounts }) {
     const navigate = useNavigate();
-
-    const validateLogin = (user) => {
-        const foundUser = accounts.find(acc => 
-            acc.username === user.username &&
-            acc.password === user.password
-        );
-
-        if (!foundUser) return "Wrong credentials";
-
-        return null;
-    }
+    const {login, handleFieldChange, error, user} = useAuth(state, dispatch, accounts);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        const error = validateLogin(state.user);
-
-        if (error) dispatch({ type: "LOGIN_FAILURE", payload: error })
-        else 
-        {   
-            dispatch({ type: "LOGIN_SUCCESS" });
-            navigate(`/orchids`)
-        }
+        login();
     }
     
     return (
@@ -41,12 +25,7 @@ function Login({ state, dispatch, accounts }) {
                             <Form.Label>Username</Form.Label>
                             <Form.Control required type = "text" placeholder = "Enter username" 
                                           value = {state.user.username} 
-                                          onChange = {(e) => dispatch({
-                                                type: 'FIELD_CHANGE',
-                                                field: 'username',
-                                                value: e.target.value
-                                            })
-                                          }
+                                          onChange = {(e) => handleFieldChange('username', e.target.value)}
                             />
                         </Form.Group>
                     </Row>
@@ -56,12 +35,7 @@ function Login({ state, dispatch, accounts }) {
                             <Form.Label>Password</Form.Label>
                             <Form.Control required type = "password" placeholder = "Enter password" 
                                           value = {state.user.password} 
-                                          onChange = {(e) => dispatch({
-                                                type: 'FIELD_CHANGE',
-                                                field: 'password',
-                                                value: e.target.value
-                                            })
-                                        }
+                                          onChange = {(e) => handleFieldChange('password', e.target.value)}
                             />
                         </Form.Group>
                     </Row>

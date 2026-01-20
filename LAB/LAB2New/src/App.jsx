@@ -1,16 +1,16 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useReducer, useState } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import MainLayout from "./components/MainLayout";
+import MainLayout from "./layouts/MainLayout";
 import About from './pages/About'; 
 import Contact from './pages/Contact';
 import ListOfOrchids from './pages/ListOfOrchids';
-import Login from './pages/login/Login';
-import OrchidDetail from './components/OrchidDetail';
+import Login from './pages/Login';
+import OrchidDetail from './pages/OrchidDetail';
 import mockAccounts from './data/MockAccounts'
 import orchids from './data/Orchids';
 import userInfo from './data/UserInfo';
-import { initialState, loginReducer } from './pages/login/LoginReducer';
+import { initialState, loginReducer } from './store/LoginReducer';
 
 function App() {
   const [user, setUser] = useState({...userInfo});
