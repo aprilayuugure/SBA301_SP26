@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom"
 import { useState, useEffect } from "react";
 import validateOrchid from "../features/auth/OrchidValidation";
 import OrchidService from "../service/OrchidService";
-
+    
 export const useOrchids = (state, dispatch, id = null) => {
     const navigate = useNavigate();
 
@@ -13,11 +13,6 @@ export const useOrchids = (state, dispatch, id = null) => {
                             dispatch({ type: "UPDATE_ORCHID", payload: res.data });
                          })
         }
-
-        return () => {
-            dispatch({ type: "ADD_ORCHID"});
-        }
-        
     }, [id, dispatch]);
 
     const checkForm = async () => {
@@ -32,12 +27,12 @@ export const useOrchids = (state, dispatch, id = null) => {
                     await OrchidService.update(id, state.orchid);
                 } 
                 else {
-                    await OrchidService.add(state.orchid);
-                    dispatch({ type: "ADD_ORCHID"});
+                    const res = await OrchidService.add(state.orchid);
+
+                    dispatch({ type: "ADD_ORCHID", payload: res.data });
                 }
 
                 navigate(`/orchids`);
-                window.location.reload();
             }
             catch (err) {
                 console.error(err);
@@ -48,7 +43,6 @@ export const useOrchids = (state, dispatch, id = null) => {
     const deleteOrchid = async (id) => {
         await OrchidService.delete(id);
         navigate(`/orchids`);
-        window.location.reload();
     }
     
     const handleFieldChange = (field, value) =>

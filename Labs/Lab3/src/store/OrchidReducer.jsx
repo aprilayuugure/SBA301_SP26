@@ -1,6 +1,5 @@
 export const orchidInitialState = {
     orchid: {
-      id: 0,
       name: '',
       image: '',
       description: '',
@@ -36,7 +35,11 @@ export function orchidReducer(state, action) {
             }
 
         case 'ADD_ORCHID':
-            return orchidInitialState;
+            return {
+                ...state, 
+                orchid: action.payload,
+                errors: {}
+            }
 
         case 'UPDATE_ORCHID':
             return {

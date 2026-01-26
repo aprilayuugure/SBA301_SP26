@@ -1,13 +1,13 @@
 import {Container, Col, Row, Button} from 'react-bootstrap';
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import useFetchData from '../hooks/useFetchData';
+import { useOrchid } from '../hooks/useOrchid';
 import { useOrchids } from '../hooks/useOrchids';
 
 function OrchidDetail({state, dispatch}) {
     const {id} = useParams();
     const navigate = useNavigate();
-    const orchid = useFetchData(id);
+    const orchid = useOrchid(id);
     const { deleteOrchid } = useOrchids(state, dispatch);
 
     if (!orchid) {

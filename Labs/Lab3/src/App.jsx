@@ -3,7 +3,7 @@ import { useReducer, useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import axios from 'axios';
 
-import useFetchData from "./hooks/useFetchData";
+import { useOrchidList } from './hooks/useOrchidList';
 
 import MainLayout from "./layouts/MainLayout";
 
@@ -23,7 +23,7 @@ import { orchidInitialState, orchidReducer } from './store/OrchidReducer';
 function App() {
   const [user, setUser] = useState({...userInfo});
   const [searchText, setSearchText] = useState('');
-  const orchids = useFetchData();
+  const orchids = useOrchidList();
   const [loginState, loginDispatch] = useReducer(loginReducer, loginInitialState);
   const [orchidState, orchidDispatch] = useReducer(orchidReducer, orchidInitialState);
 

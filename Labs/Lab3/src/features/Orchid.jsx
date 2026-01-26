@@ -18,7 +18,7 @@ function Orchid ( {orchid} ) {
             )
         }    
 
-        <Card.Img variant = "top" style = {{ width: '200px', height: '200px', borderRadius: '0px', objectFit: 'cover', margin: 'auto' }} 
+        <Card.Img variant = "top" style = {{ width: '100%', height: '200px', borderRadius: '0px', objectFit: 'cover', margin: 'auto' }} 
                   src = {image ? image : "/no_image.jpg"} 
                   onError = {(e) => { e.target.src = "/no_image.jpg" }}/>
         <Card.Body>

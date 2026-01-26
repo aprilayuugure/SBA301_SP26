@@ -1,16 +1,6 @@
 {
   "orchids": [
     {
-      "id": 1,
-      "name": "Caesar Orchid",
-      "image": "/images/orchids/orchid_1.png",
-      "description": "The versatile species produces blooms that last indoors or outdoors. These hardy plants are localised and adapted to thrive in Singapore weather. These are live plants.",
-      "category": "Dendrobium",
-      "isSpecial": true,
-      "price": 29.99
-    },
-
-    {
       "id": 2,
       "name": "Gnome Orchid",
       "image": "/images/orchids/orchid_2.jpg",
@@ -19,7 +9,6 @@
       "isSpecial": true,
       "price": 19.99
     },
-
     {
       "id": 3,
       "name": "Constantia Orchid",
@@ -29,7 +18,6 @@
       "isSpecial": true,
       "price": 24.99
     },
-    
     {
       "id": 4,
       "name": "Dirius Orchid",
@@ -39,7 +27,6 @@
       "isSpecial": false,
       "price": 14.99
     },
-
     {
       "id": 5,
       "name": "Dracula Orchid",
@@ -49,7 +36,6 @@
       "isSpecial": true,
       "price": 34.99
     },
-
     {
       "id": 6,
       "name": "Eria Orchid",
@@ -59,7 +45,6 @@
       "isSpecial": false,
       "price": 22.99
     },
-    
     {
       "id": 7,
       "name": "Ipsea Orchid",
@@ -69,7 +54,6 @@
       "isSpecial": true,
       "price": 22.99
     },
-
     {
       "id": 8,
       "name": "Pogonia Orchid",
@@ -81,4 +65,3 @@
     }
   ]
 }
-
