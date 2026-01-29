@@ -1,14 +1,13 @@
 import { useNavigate, useParams } from "react-router-dom";
-import { useState } from "react";
 import { Container, Card, Form, Row, Col, Button } from "react-bootstrap";
-import validateOrchid from "../features/auth/OrchidValidation";
+import { useCategory } from "../hooks/useCategory";
 import { useOrchids } from "../hooks/useOrchids";
-import { useOrchidList } from "../hooks/useOrchidList";
 
-function OrchidForm({ state, dispatch }) {
+function OrchidForm({state, dispatch }) {
     const { id } = useParams();
     const navigate = useNavigate();
-        const {checkForm, handleFieldChange, errors, orchid} = useOrchids(state, dispatch, id);
+    const categories = useCategory();
+    const {checkForm, handleFieldChange, errors, orchid} = useOrchids(state, dispatch, id, categories);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -58,9 +57,16 @@ function OrchidForm({ state, dispatch }) {
                     <Row className = "mb-3">
                         <Form.Group as = {Col} md = "12" controlId = "category">
                             <Form.Label>Category</Form.Label>
-                            <Form.Control type = "text" value = {orchid.category}
+                            <Form.Control as = "select" value = {orchid.category.id || ""}
                                           isInvalid = {!!errors.category}
-                                          onChange = {(e) => handleFieldChange('category', e.target.value)}/>
+                                          onChange = {(e) => handleFieldChange('category', e.target.value)}>
+                            
+                            <option value = "">Select a category</option>
+                            {categories.map(c => (
+                                <option key = {c.id} value = {c.id}>{c.name}</option>
+                            ))}
+
+                            </Form.Control>
 
                             <Form.Control.Feedback type = "invalid">{errors.category}</Form.Control.Feedback>
                         </Form.Group>

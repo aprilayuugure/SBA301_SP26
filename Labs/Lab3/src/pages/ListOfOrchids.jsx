@@ -1,7 +1,8 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { useState, useMemo } from "react";
 import Orchid from "../features/Orchid"; 
-import FilterSort from "../features/FilterSort"; 
+import FilterSort from "../features/FilterSort";
+import { useCategory } from "../hooks/useCategory"; 
 
 function ListOfOrchids( { orchids, searchText } ) {
     const [filterCategory, setFilterCategory] = useState('');
@@ -15,14 +16,12 @@ function ListOfOrchids( { orchids, searchText } ) {
         setSortOrder(order);
     };
 
-    const categories = useMemo(() => { 
-        return [...new Set(orchids.map(orchid => orchid.category))];
-    }, [orchids]);
+    const categories = useCategory();
 
     const filteredOrchids = useMemo(() => {
         let result = orchids
                             .filter(orchid => orchid.name.toLowerCase().includes(searchText))
-                            .filter(orchid => filterCategory === '' || orchid.category === filterCategory);
+                            .filter(orchid => filterCategory === '' || orchid.category.name === filterCategory);
     
         switch (sortOrder) {
             case "price-asc": return [...result].sort((a, b) => a.price - b.price);

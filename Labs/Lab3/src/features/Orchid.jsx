@@ -23,7 +23,7 @@ function Orchid ( {orchid} ) {
                   onError = {(e) => { e.target.src = "/no_image.jpg" }}/>
         <Card.Body>
             <Card.Title className = "text-center">{name}</Card.Title>
-            <Card.Text>Category: {category}</Card.Text>
+            <Card.Text>Category: {category.name}</Card.Text>
             <Card.Text style = {{ fontWeight: 'bold', color: 'red' }}>Price: {price}</Card.Text>
         </Card.Body>      
 

@@ -34,7 +34,7 @@ function OrchidDetail({state, dispatch}) {
                     <Col md = {6}>
                         <h2>{orchid.name}</h2>
                         <p>{orchid.description}</p>
-                        <p>Category: {orchid.category}</p>
+                        <p>Category: {orchid.category.name}</p>
                         <p>Is Special: {orchid.isSpecial ? "Yes" : "No"}</p>
                         <p style = {{color: 'red', fontWeight: 'bold'}} >Price: ${orchid.price}</p>
                         

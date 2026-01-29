@@ -21,7 +21,7 @@ function FilterSort({categories, onFilterChange, onSortChange}) {
                                 <option value = "">All Categories</option>  
                                 {
                                     categories.map((category, index) => (
-                                    <option key = {index} value = {category}>{category}</option>
+                                    <option key = {index} value = {category.name}>{category.name}</option>
                                     ))
                                 }
                             </Form.Control>

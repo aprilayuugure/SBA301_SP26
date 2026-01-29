@@ -1,7 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useReducer, useState, useEffect } from 'react';
+import { useReducer, useState } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import axios from 'axios';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import { useOrchidList } from './hooks/useOrchidList';
 
@@ -45,6 +46,8 @@ function App() {
             <Route path = "/contact" element = {<Contact userInfo = {user} />} />
           </Route>
         </Routes>
+
+        <ToastContainer position = "top-right" autoClose = {2000} theme = "colored" />
     </BrowserRouter>
   );
 }
