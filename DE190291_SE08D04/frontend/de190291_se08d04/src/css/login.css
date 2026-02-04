@@ -1,0 +1,24 @@
+.login {
+    min-height: 100vh;
+    background-image: url("/login-bg.png");    
+}
+
+.login-overlay {
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.01);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+.login-content {
+    position: relative;
+    z-index: 1;
+}
+
+.login-card {
+    width: 350px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}

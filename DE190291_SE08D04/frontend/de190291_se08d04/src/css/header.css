@@ -1,0 +1,12 @@
+.header-navbar {
+    background-color: #21D375;
+}
+
+.login-btn {
+    background-color: #0b6d4e;
+    border: none;
+}
+
+.login-btn:hover {
+    background-color: #063e2c;
+}
