@@ -1,0 +1,14 @@
+DROP DATABASE IF EXISTS UserJWT;
+
+CREATE DATABASE UserJWT;
+
+CREATE TABLE users (
+	id INT IDENTITY(1,1) PRIMARY KEY, 
+    full_name NVARCHAR(255) NOT NULL,
+    email NVARCHAR(100) NOT NULL UNIQUE,
+    password NVARCHAR(255) NOT NULL,
+    created_at DATETIME,
+    updated_at DATETIME
+);
+
+SELECT * FROM users;
