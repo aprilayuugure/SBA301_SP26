@@ -1,0 +1,32 @@
+[
+    {
+      "id": 1,
+      "image": "/images/carousel/carousel-item-1.jpg",
+      "title": "Welcome to Paradise Hotel",
+      "description": "Enjoy stunning exterior views and world-class hospitality."
+    },
+    {
+      "id": 2,
+      "image": "/images/carousel/carousel-item-2.jpg",
+      "title": "Elegant Reception Area",
+      "description": "Our friendly staff are ready to welcome you 24/7."
+    },
+    {
+      "id": 3,
+      "image": "/images/carousel/carousel-item-3.jpg",
+      "title": "Deluxe Room",
+      "description": "Spacious comfort with modern interior design."
+    },
+    {
+      "id": 4,
+      "image": "/images/carousel/carousel-item-4.jpg",
+      "title": "Executive Suite",
+      "description": "Luxury living with premium amenities."
+    },
+    {
+      "id": 5,
+      "image": "/images/carousel/carousel-item-5.jpg",
+      "title": "Infinity Swimming Pool",
+      "description": "Relax and unwind with breathtaking views."
+    }
+ ]
