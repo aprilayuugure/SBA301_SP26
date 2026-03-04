@@ -17,19 +17,6 @@ function CarManagement() {
         <>
             <div className = "py-4 text-center">
                 <h3 className = "mb-3">Car Management</h3>
-
-                <button
-                    className = "btn"
-                    style= {{
-                        backgroundColor: "#ef233c",
-                        borderColor: "#ef233c",
-                        color: "white",
-                        padding: "8px 25px"
-                    }}
-                    onClick={() => navigate("/cars/add")}
-                >
-                    Add car
-                </button>
             </div>
 
             <div className = "container" style = {{ maxWidth: "1150px" }}>
