@@ -1,0 +1,44 @@
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg,#89f7fe,#66a6ff);
+    height:100vh;
+    margin:0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table{
+    background: white;
+    width: 450px;
+
+    border-radius: 10px;
+    overflow: hidden;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+thead th{
+    font-size: 20px;
+    text-align: center;
+    padding: 15px;
+    background: #f8f9fa;
+}
+
+td{
+    padding: 15px;
+    vertical-align: middle;
+}
+
+input{
+    width: 100%;
+}
+
+tbody tr:last-child td{
+    text-align: center;
+}
+
+button{
+    margin: 5px;
+}

@@ -1,0 +1,100 @@
+body {
+    background-color: #f5f7fb;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page-container {
+    width: 90%;
+    margin: 30px auto;
+}
+
+.portlet {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.caption-subject {
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+.title-icons {
+    width: 40px;
+    height: 40px;
+}
+
+.lbl-toggle {
+    display: block;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.lbl-toggle:hover {
+    background: #0056b3;
+}
+
+.collapsible-content {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: white;
+}
+
+.table {
+    margin-top: 15px;
+}
+
+.table th {
+    background: #343a40;
+    color: white;
+    text-align: center;
+}
+
+.table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.detail_header th {
+    background: #17a2b8;
+    color: white;
+}
+
+input[type="text"] {
+    width: 90%;
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+button {
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.btn-primary {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.clearfix {
+    margin-top: 10px;
+}
