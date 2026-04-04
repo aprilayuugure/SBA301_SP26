@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Outlet } from "react-router-dom";
 
-function MainLayout({ user, state, dispatch, onSearchChange}) {
+function MainLayout({ user, state, dispatch, onSearchChange }) {
     return (
         <div className = "d-flex flex-column min-vh-100">
             <HomeCarousel />

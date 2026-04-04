@@ -66,7 +66,7 @@ export function useCars() {
         }
     }
 
-        const add = async(id, data) => {
+    const add = async(id, data) => {
         dispatch({ type: "CLEAR_ERRORS" });
 
         try {

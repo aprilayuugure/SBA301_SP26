@@ -33,6 +33,7 @@ public class Category implements Serializable {
     @OneToMany(mappedBy = "parentCategory")
     private List<Category> childCategories;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "newsCategory")
     private List<NewsArticle> newsArticles;
 

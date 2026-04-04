@@ -56,7 +56,7 @@ public class AuthenticationService {
                             .token(token)
                             .expiresIn(jwtService.getExpirationTime())
                             .role(role)
-                            .emailAddress(userDetails.getUsername())
+                            .email(userDetails.getUsername())
                             .build();
     }
 

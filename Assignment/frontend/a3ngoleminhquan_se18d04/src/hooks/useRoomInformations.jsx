@@ -77,7 +77,6 @@ export function useRoomInformations() {
                 });
             }
             else {
-                console.log("UPDATE MODE");
                 const res = await api.put(
                     `/rooms/${state.roomInformation.roomId}`, state.roomInformation
                 );

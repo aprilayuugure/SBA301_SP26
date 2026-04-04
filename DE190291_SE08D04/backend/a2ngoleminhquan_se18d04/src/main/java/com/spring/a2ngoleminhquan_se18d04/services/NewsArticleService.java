@@ -40,7 +40,7 @@ public class NewsArticleService implements INewsArticleService {
             n.getNewsTags().clear();
             n.getNewsTags().addAll(na.getNewsTags());
             n.setUpdatedBy(na.getUpdatedBy());
-            n.setModifedDate(new Date());
+            n.setModifiedDate(new Date());
 
             return newsArticleRepo.save(n);
         }

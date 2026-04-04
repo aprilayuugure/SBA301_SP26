@@ -9,7 +9,7 @@ public class LoginResponse {
 
     private Long expiresIn;
 
-    private String emailAddress;
+    private String email;
 
     private String role;
 }

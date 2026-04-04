@@ -34,7 +34,6 @@ public class NewsArticle implements Serializable {
     @Column(name = "news_source")
     private String newsSource;
 
-    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "news_category")
     private Category newsCategory;
@@ -60,5 +59,5 @@ public class NewsArticle implements Serializable {
     private SystemAccount updatedBy;
 
     @Column(name = "modified_date")
-    private Date modifedDate;
+    private Date modifiedDate;
 }

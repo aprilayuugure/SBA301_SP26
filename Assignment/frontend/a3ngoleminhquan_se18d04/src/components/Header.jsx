@@ -64,7 +64,6 @@ export function Header() {
                             </>
                         )}
 
-                        {/* STAFF */}
                         {user?.role === "ROLE_STAFF" && (
                             <>
                                 <li className="nav-item">
